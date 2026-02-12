@@ -19,13 +19,13 @@ Semantic search across news summaries using natural language queries.
 - Supports date extraction from queries (e.g., "news from last week", "events yesterday")
 - Returns ranked results with relevance scores
 - Use `language: "RU"` for Kyrgyz-language results (default), `language: "EN"` for English translations
-- Limit results with `limit` (1-100, default 10)
+- Limit results with `limit` (1-20, default 10)
 - Optionally specify `fromDate` and `toDate` in ISO 8601 format
 
 ### get_latest_news
 Browse recent news summaries with pagination.
 
-- Use `page` (0-based) and `pageSize` (1-50) for pagination
+- Use `page` (0-based) and `pageSize` (1-20) for pagination
 - Filter by `language: "RU"` or `"EN"`
 - Returns summary titles, sources, dates, categories, and IDs
 
@@ -62,5 +62,6 @@ Get trending news clusters — groups of similar articles from multiple sources 
 - Most Kyrgyz news is published in Russian — use `language: "RU"` for the broadest coverage
 - English translations (`language: "EN"`) are available for most summaries
 - Date extraction works with natural language: "last week", "yesterday", "in January"
+- Each summary includes a direct link to the article on fuddy-duddy.org
 - Each summary links to the original source article for verification
 - Cluster reference counts indicate how many sources covered a story

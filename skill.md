@@ -41,6 +41,8 @@ Get trending news clusters — groups of similar articles from multiple sources 
 
 - Returns cluster titles and reference counts
 - Filter by `language: "RU"` or `"EN"`
+- Filter by `period`: `today`, `yesterday`, `this_week` (default), `last_week`, `this_month`, `last_month`
+- Clusters are ranked by references within the selected period
 - Clusters with a lead article ID can be explored further with `get_news_article`
 
 ## Workflow Patterns

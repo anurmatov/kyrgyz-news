@@ -67,3 +67,7 @@ Get trending news clusters — groups of similar articles from multiple sources 
 - Each summary includes a direct link to the article on fuddy-duddy.org
 - Each summary links to the original source article for verification
 - Cluster reference counts indicate how many sources covered a story
+
+## For developers
+
+All tools return structured JSON responses with declared `outputSchema` values (MCP spec v1.0). Each response is a typed object — no markdown parsing required. Empty results preserve query metadata (e.g. `query`, `fromDate`, `toDate`, `datesExtracted`) so the client always knows what was requested. Not-found cases return `{ notFound: true, id, similarities: [] }` instead of error text.
